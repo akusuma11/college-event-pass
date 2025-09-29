@@ -289,7 +289,10 @@ const EventDetail = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 {/* General Ticket */}
-                <div className="border rounded-lg p-4 hover:border-primary transition-colors cursor-pointer">
+                <div 
+                  className="border rounded-lg p-4 hover:border-primary transition-colors cursor-pointer"
+                  onClick={() => window.location.href = '/booking?ticket=general'}
+                >
                   <div className="flex justify-between items-start mb-2">
                     <div>
                       <h4 className="font-semibold">General Access</h4>
@@ -309,7 +312,10 @@ const EventDetail = () => {
                 </div>
 
                 {/* VIP Ticket */}
-                <div className="border-2 border-primary rounded-lg p-4 relative">
+                <div 
+                  className="border-2 border-primary rounded-lg p-4 relative cursor-pointer hover:bg-accent/50 transition-colors"
+                  onClick={() => window.location.href = '/booking?ticket=vip'}
+                >
                   <Badge className="absolute -top-2 left-4 bg-primary text-white">
                     RECOMMENDED
                   </Badge>
@@ -351,7 +357,10 @@ const EventDetail = () => {
                   </div>
                 </div>
 
-                <Button className="w-full bg-gradient-primary hover:opacity-90 text-white font-semibold py-3">
+                <Button 
+                  className="w-full bg-gradient-primary hover:opacity-90 text-white font-semibold py-3"
+                  onClick={() => window.location.href = '/booking?ticket=vip'}
+                >
                   Beli Tiket Sekarang
                 </Button>
 
